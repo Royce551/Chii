@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chii", "Chii\Chii.csproj", "{882A571E-95DC-431F-B76D-376EE90880EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{882A571E-95DC-431F-B76D-376EE90880EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882A571E-95DC-431F-B76D-376EE90880EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882A571E-95DC-431F-B76D-376EE90880EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882A571E-95DC-431F-B76D-376EE90880EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54547FC1-7516-418C-8D15-B8CAFCA4EB24}
+	EndGlobalSection
+EndGlobal

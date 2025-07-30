@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chii", "Chii\Chii.csproj", "{DAD739F7-F9AC-F951-B9B3-0614697D341E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chii.Desktop", "Chii.Desktop\Chii.Desktop.csproj", "{7A24B0CA-386F-0382-2BF7-379BF1C2871B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAD739F7-F9AC-F951-B9B3-0614697D341E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD739F7-F9AC-F951-B9B3-0614697D341E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD739F7-F9AC-F951-B9B3-0614697D341E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD739F7-F9AC-F951-B9B3-0614697D341E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A24B0CA-386F-0382-2BF7-379BF1C2871B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A24B0CA-386F-0382-2BF7-379BF1C2871B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A24B0CA-386F-0382-2BF7-379BF1C2871B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A24B0CA-386F-0382-2BF7-379BF1C2871B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F807C39-16DF-4BD5-8E3B-9C8AA4C67031}
+	EndGlobalSection
+EndGlobal

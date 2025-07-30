@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Chii.ViewModels"
+        xmlns:views="clr-namespace:Chii.Views"
+        mc:Ignorable="d" Width="500" Height="350"
+        x:Class="Chii.Views.MainWindow" Topmost="{Binding AlwaysOnTop}"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Chii">
+  
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <Window.Styles>
+    <Style Selector="Button.controlcolored">
+      <Setter Property="Background" Value="{DynamicResource AccentColor}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource AccentColor}" />
+      <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColorOverAccent}" />
+    </Style>
+  </Window.Styles>
+
+  <DockPanel>
+    <Panel DockPanel.Dock="Top" Background="{DynamicResource ForegroundColor}">
+      <StackPanel Margin="10,5" Spacing="15" Orientation="Horizontal">
+        <Button Content="Menu" Command="{Binding Search}"/>
+        <CheckBox Content="Pin Window" IsChecked="{Binding AlwaysOnTop}"/>
+      </StackPanel>
+      <StackPanel Margin="10,5" Spacing="15" Orientation="Horizontal" HorizontalAlignment="Right">
+        <Button Content="Search" Command="{Binding Search}"/>
+      </StackPanel>
+    </Panel>
+    <ContentControl Content="{Binding BrowserContent}"/>
+  </DockPanel>
+</Window>

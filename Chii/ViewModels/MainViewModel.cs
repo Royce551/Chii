@@ -1,4 +1,6 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
+using Chii.Platform;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Threading.Tasks;
 using Xilium.CefGlue.Avalonia;
@@ -14,13 +16,26 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty]
     private bool alwaysOnTop;
 
+    private IPlatformHandler platform;
+
     public MainViewModel()
     {
         BrowserContent = new AvaloniaCefBrowser();
         BrowserContent.LoadingStateChange += BrowserContent_LoadingStateChange;
-        OpenDictionary(@"%E3%81%93%E3%81%AE%E8%BE%BA%E3%81%AE%E5%9B%BD%E3%81%AF%E6%95%B0%E5%AD%A6%E3%81%8C%E4%B8%80%E7%95%AA%E3%83%A4%E3%83%90%E3%81%84");
-
+        BrowserContent.Address = "https://jisho.org";
     }
+
+    public void Initialize()
+    {
+        if (Avalonia.Application.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+            platform = new WindowsPlatformHandler(desktop.MainWindow);
+
+        platform.Initialize();
+
+        platform.ClipboardChanged += Platform_ClipboardChanged;   
+    }
+
+    private void Platform_ClipboardChanged(object? sender, System.EventArgs e) => Search();
 
     public async Task Search()
     {

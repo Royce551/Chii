@@ -27,7 +27,7 @@
   <DockPanel>
     <Panel DockPanel.Dock="Top" Background="{DynamicResource ForegroundColor}">
       <StackPanel Margin="10,5" Spacing="15" Orientation="Horizontal">
-        <Button Content="Menu" Command="{Binding Search}"/>
+        <Button Content="Menu" Click="Button_Click_1"/>
         <CheckBox Content="Pin Window" IsChecked="{Binding AlwaysOnTop}"/>
       </StackPanel>
       <StackPanel Margin="10,5" Spacing="15" Orientation="Horizontal" HorizontalAlignment="Right">

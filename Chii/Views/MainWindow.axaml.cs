@@ -18,4 +18,9 @@ public partial class MainWindow : Window
     {
         viewModel?.Initialize();
     }
+
+    private void Button_Click_1(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        Hide();
+    }
 }

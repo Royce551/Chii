@@ -31,7 +31,6 @@ public partial class MainViewModel : ViewModelBase
             platform = new WindowsPlatformHandler(desktop.MainWindow);
 
         platform.Initialize();
-
         platform.ClipboardChanged += Platform_ClipboardChanged;   
     }
 

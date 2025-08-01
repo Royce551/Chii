@@ -31,4 +31,12 @@ public partial class App : Application
 
         base.OnFrameworkInitializationCompleted();
     }
+
+    private void NativeMenuItem_Click(object? sender, System.EventArgs e)
+    {
+        if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+        {
+            desktop.MainWindow.Show();
+        }
+    }
 }

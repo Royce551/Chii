@@ -9,4 +9,18 @@
         <FluentTheme />
       <StyleInclude Source="avares://SIADL.Avalonia/SIADL.axaml"/>
     </Application.Styles>
+
+  <TrayIcon.Icons>
+    <TrayIcons>
+      <TrayIcon Icon="/Assets/avalonia-logo.ico"
+                ToolTipText="Chii" Clicked="NativeMenuItem_Click">
+        <TrayIcon.Menu>
+          <NativeMenu>
+            <NativeMenuItem Header="Show Window" Click="NativeMenuItem_Click">
+            </NativeMenuItem>
+          </NativeMenu>
+        </TrayIcon.Menu>
+      </TrayIcon>
+    </TrayIcons>
+  </TrayIcon.Icons>
 </Application>

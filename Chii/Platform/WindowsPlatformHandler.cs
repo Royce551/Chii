@@ -8,23 +8,20 @@ using System.Threading.Tasks;
 
 namespace Chii.Platform
 {
-    class WindowsPlatformHandler : IPlatformHandler
+    class WindowsPlatformHandler(Window window) : IPlatformHandler
     {
-        public event EventHandler<EventArgs> ClipboardChanged;
+        public event EventHandler<EventArgs>? ClipboardChanged;
 
-        private readonly Window window;
-
-        public WindowsPlatformHandler(Window window)
-        {
-            this.window = window;
-        }
-
+        private readonly Window window = window;
 
         public void Initialize()
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) throw new PlatformNotSupportedException();
 
-            AddClipboardFormatListener(window.TryGetPlatformHandle().Handle);
+            var platformHandle = window.TryGetPlatformHandle();
+            if (platformHandle is null) return;
+
+            AddClipboardFormatListener(platformHandle.Handle);
             Win32Properties.AddWndProcHookCallback(window, WndProc);
         }
 
